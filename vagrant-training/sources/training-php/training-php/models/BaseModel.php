@@ -7,15 +7,7 @@ abstract class BaseModel {
 
     public function __construct() {
 
-        // echo "Minh Hieu";
-        // echo "</br>";
-        // echo DB_HOST;
-        // echo "</br>";
-        // echo DB_USER;
-        // echo "</br>";
-        // echo DB_PASSWORD;
-        // echo "</br>";
-        // exit();
+       
         if (!isset(self::$_connection)) {
             self::$_connection = mysqli_connect('web-mysql', DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
             if (self::$_connection->connect_errno) {
